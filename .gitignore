@@ -1,0 +1,14 @@
+# Intentionally ignore only files produced by tools executed from ./autogen.sh
+# and do NOT ignore files produced by ./configure - use shadow build to not
+# mess up source tree with configure & build artifacts:
+#
+#   cd build && ../configure && make
+#
+/aclocal.m4
+/autom4te.cache/
+/config.h.in
+/configure
+/depcomp
+/install-sh
+/missing
+Makefile.in

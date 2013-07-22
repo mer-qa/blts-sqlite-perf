@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testdefinition version="1.0">
+
+  <suite name="blts-sqlite-perf">
+
+    <set name="blts-sqlite-perf">
+
+      <case name="in-memory database"
+        description="Benchmark with an in-memory database instance"
+        type="Performance">
+
+        <step>/opt/tests/blts-sqlite-perf/blts-sqlite-perf -csv /tmp/blts-sqlite-perf.csv -f ":memory:"</step>
+
+        <get>
+          <file measurement="true">/tmp/blts-sqlite-perf.csv</file>
+        </get>
+
+      </case>
+
+      <case name="file-backed database"
+        description="Benchmark with a file-backed database instance"
+        type="Performance">
+
+        <step>/opt/tests/blts-sqlite-perf/blts-sqlite-perf -csv /tmp/blts-sqlite-perf.csv -f "${HOME}/blts-sqlite-perf.db"</step>
+
+        <get>
+          <file measurement="true">/tmp/blts-sqlite-perf.csv</file>
+        </get>
+
+      </case>
+
+    </set>
+
+  </suite>
+
+</testdefinition>

@@ -1,0 +1,3 @@
+Performance test suite for sqlite.
+
+Implements test cases documented on http://www.sqlite.org/speed.html
