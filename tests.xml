@@ -7,7 +7,8 @@
 
       <case name="in-memory database"
         description="Benchmark with an in-memory database instance"
-        type="Performance">
+        type="Performance"
+        timeout="200">
 
         <step>/opt/tests/blts-sqlite-perf/blts-sqlite-perf -csv /tmp/blts-sqlite-perf.csv -f ":memory:"</step>
 
@@ -19,7 +20,8 @@
 
       <case name="file-backed database"
         description="Benchmark with a file-backed database instance"
-        type="Performance">
+        type="Performance"
+        timeout="200">
 
         <step>/opt/tests/blts-sqlite-perf/blts-sqlite-perf -csv /tmp/blts-sqlite-perf.csv -f "${HOME}/blts-sqlite-perf.db"</step>
 
